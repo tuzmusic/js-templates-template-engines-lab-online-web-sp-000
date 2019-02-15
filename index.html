@@ -60,7 +60,7 @@
         Sidebar
       </div>
 
-      <div id="post-container" style="float:left" width="10em">
+      <div id="post" style="float:left" width="10em">
         Posts:
       </div>
     </script>
@@ -79,7 +79,7 @@
 
     <script id="comments-template" type="text/x-lodash-template">
     <h3>Add comment:</h3>
-    <form id="comment-form" onsubmit="postComment();return false;">
+    <form onsubmit="postComment();return false;">
       <p>
         <input type="text" , id="comment" />
       </p>
@@ -88,8 +88,10 @@
       </p>
       <input type="submit" />
     </form>
-    </script>
 
+    <div id="comments"></div>
+
+    </script>
     <script id='comment-template' type='text/x-lodash-template'>
     <div class="comment">
       <p><%- comment %></p>
