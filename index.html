@@ -8,22 +8,37 @@
       <b>Post Form:</b>
       <form id="post-form" onsubmit="createPost();return false;">
         <p>
-          Title: <input type="text" name="title" id="post-title" value="placeholder TITLE">
+          Title:
+          <input
+            type="text"
+            name="title"
+            id="post-title"
+            value="placeholder TITLE"
+          />
         </p>
         <p>
-          Body: <input type="text-area" name="body" id="post-body" value="placeholder BODY">
+          Body:
+          <input
+            type="text-area"
+            name="body"
+            id="post-body"
+            value="placeholder BODY"
+          />
         </p>
         <p>
-          Author: <input type="text" name="author" id="post-author" value="placeholder AUTHOR">
+          Author:
+          <input
+            type="text"
+            name="author"
+            id="post-author"
+            value="placeholder AUTHOR"
+          />
         </p>
         <p>
-          <input type="submit">
+          <input type="submit" />
         </p>
       </form>
-      <div id="page-container">
-        <div id="post-container">
-          <!-- POST GOES HERE -->
-        </div>
+      <div id="page-container" style="margin:1em 2em;">
       </div>
     </main>
 
@@ -41,13 +56,12 @@
     <script src="test/index-test.js"></script>
 
     <script id="page-template" type="text/x-lodash-template">
-      <div class="sidebar">
+      <div id="sidebar" style="float:right" width="2em">
         Sidebar
       </div>
 
-      <div class="post-container">
+      <div id="post-container" style="float:left" width="10em">
         Posts:
-        <%- post %>
       </div>
     </script>
 
@@ -63,9 +77,24 @@
       </article>
     </script>
 
-    <script id="comment-template" type="text/x-lodash-template">
+    <script id="comments-template" type="text/x-lodash-template">
+    <h3>Add comment:</h3>
+    <form id="comment-form" onsubmit="postComment();return false;">
+      <p>
+        <input type="text" , id="comment" />
+      </p>
+      <p>
+        <input type="text" , id="commenter" />
+      </p>
+      <input type="submit" />
+    </form>
+    </script>
+
+    <script id='comment-template' type='text/x-lodash-template'>
+    <div class="comment">
       <p><%- comment %></p>
       <footer><%- commenter %></footer>
+    </div>
     </script>
   </body>
 </html>
