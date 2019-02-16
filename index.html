@@ -61,7 +61,7 @@
       </div>
 
       <div id="post" style="float:left" width="10em">
-        Posts:
+        <div id="post-container"></div>
       </div>
     </script>
 
@@ -81,10 +81,10 @@
     <h3>Add comment:</h3>
     <form onsubmit="postComment();return false;">
       <p>
-        <input type="text" , id="comment" />
+        <input type="text" id="comment" value="comment"/>
       </p>
       <p>
-        <input type="text" , id="commenter" />
+        <input type="text" id="commenter" value="author"/>
       </p>
       <input type="submit" />
     </form>
